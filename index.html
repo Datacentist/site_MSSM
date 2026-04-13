@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site officiel de la Commune de Marsassoum — Département de Sédhiou, Sénégal." />
+  <title>Accueil — Commune de Marsassoum</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Style principal -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">CM</div>
+        <div class="logo-text">
+          <strong>Commune de Marsassoum</strong>
+          <span>Département de Sédhiou</span>
+        </div>
+      </a>
+
+      <!-- Liens desktop -->
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mairie.html">Mairie</a></li>
+        <li><a href="demarches.html">Démarches</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="territoire.html">Territoire</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Bouton dark mode + hamburger -->
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="btn-darkmode" id="btn-darkmode" onclick="toggleDarkMode()" title="Mode sombre / clair">🌙</button>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="mairie.html">🏛️ Mairie</a>
+      <a href="demarches.html">📋 Démarches</a>
+      <a href="actualites.html">📰 Actualités</a>
+      <a href="territoire.html">🗺️ Territoire</a>
+      <a href="projets.html">🚀 Projets</a>
+      <a href="contact.html">✉️ Contact</a>
+    </div>
+  </nav>
+  <!-- ═══════════ FIN NAVBAR ═══════════ -->
+
+  <main class="page-content">
+
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-pattern"></div>
+      <div class="hero-content container">
+        <div class="hero-badge">
+          <i class="bi bi-geo-alt-fill"></i> Département de Sédhiou · Sénégal
+        </div>
+        <h1>Bienvenue à<br>Marsassoum</h1>
+        <p class="hero-subtitle">
+          Portail officiel de la Commune de Marsassoum — vos services, vos démarches et votre territoire en un seul endroit.
+        </p>
+        <div class="hero-btns">
+          <a href="demarches.html" class="btn-primary"><i class="bi bi-file-earmark-text"></i> Mes démarches</a>
+          <a href="territoire.html" class="btn-secondary"><i class="bi bi-map"></i> Voir la carte</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ STATISTIQUES ═══════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-4">
+          <div class="stat-bloc fade-in" data-delay="0">
+            <div class="chiffre" data-cible="8500" data-suffix="">8 500</div>
+            <div class="label">Habitants</div>
+          </div>
+          <div class="stat-bloc fade-in" data-delay="100">
+            <div class="chiffre" data-cible="5" data-suffix="">5</div>
+            <div class="label">Écoles</div>
+          </div>
+          <div class="stat-bloc fade-in" data-delay="200">
+            <div class="chiffre" data-cible="3" data-suffix="">3</div>
+            <div class="label">Centres de santé</div>
+          </div>
+          <div class="stat-bloc fade-in" data-delay="300">
+            <div class="chiffre" data-cible="28" data-suffix=" km">28 km</div>
+            <div class="label">Routes aménagées</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PRÉSENTATION ═══════════════ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+          <div class="fade-left">
+            <span class="section-eyebrow">Notre commune</span>
+            <h2>Une commune dynamique au cœur de la Casamance</h2>
+            <p style="color:var(--texte-secondaire);margin:16px 0 24px;">
+              Marsassoum est une commune située dans le département de Sédhiou, région de Sédhiou au Sénégal. 
+              Traversée par la rivière Casamance, elle est réputée pour la richesse de son environnement naturel, 
+              la diversité de ses communautés et le dynamisme de ses activités économiques.
+            </p>
+            <p style="color:var(--texte-secondaire);margin-bottom:28px;">
+              Sous la direction du Maire <strong>Seny Mandiang</strong> et de son équipe municipale, 
+              la commune œuvre chaque jour pour améliorer le cadre de vie des citoyens et promouvoir un développement local durable.
+            </p>
+            <a href="mairie.html" class="btn-vert"><i class="bi bi-arrow-right-circle"></i> Découvrir la mairie</a>
+          </div>
+          <div class="fade-right">
+            <!-- Carte visuelle stylisée -->
+            <div style="
+              background: linear-gradient(135deg, var(--bleu-clair) 0%, var(--vert-clair) 100%);
+              border-radius: 20px;
+              padding: 40px;
+              text-align: center;
+              border: 1px solid var(--border-color);
+              box-shadow: var(--ombre-carte);
+            ">
+              <div style="font-size:4rem;margin-bottom:16px;">🌿</div>
+              <h3 style="color:var(--bleu-primaire);margin-bottom:8px;">Marsassoum</h3>
+              <p style="font-size:.88rem;color:var(--texte-secondaire);margin-bottom:20px;">
+                Commune riveraine de la Casamance<br>
+                Latitude : 12°49' N — Longitude : 15°39' O
+              </p>
+              <a href="territoire.html" class="btn-primary" style="font-size:.8rem;padding:9px 18px;">
+                <i class="bi bi-map-fill"></i> Carte interactive
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SERVICES ═══════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Nos services</span>
+          <h2>Comment pouvons-nous vous aider ?</h2>
+          <p>Accédez rapidement aux services essentiels proposés par la mairie de Marsassoum.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card fade-in" data-delay="0">
+            <div class="card-body">
+              <div class="card-icon bleu"><i class="bi bi-file-earmark-person"></i></div>
+              <h3>État Civil</h3>
+              <p style="color:var(--texte-secondaire);margin:10px 0 16px;font-size:.9rem;">
+                Demande d'actes de naissance, de mariage, de décès et autres documents officiels.
+              </p>
+              <a href="demarches.html" class="btn-vert" style="font-size:.82rem;padding:8px 16px;">Accéder</a>
+            </div>
+          </div>
+
+          <div class="card fade-in" data-delay="100">
+            <div class="card-body">
+              <div class="card-icon vert"><i class="bi bi-geo-alt"></i></div>
+              <h3>Carte du Territoire</h3>
+              <p style="color:var(--texte-secondaire);margin:10px 0 16px;font-size:.9rem;">
+                Visualisez les infrastructures, les routes et les équipements sur la carte interactive.
+              </p>
+              <a href="territoire.html" class="btn-vert" style="font-size:.82rem;padding:8px 16px;">Explorer</a>
+            </div>
+          </div>
+
+          <div class="card fade-in" data-delay="200">
+            <div class="card-body">
+              <div class="card-icon or"><i class="bi bi-megaphone"></i></div>
+              <h3>Actualités</h3>
+              <p style="color:var(--texte-secondaire);margin:10px 0 16px;font-size:.9rem;">
+                Restez informé des événements, annonces et décisions du conseil municipal.
+              </p>
+              <a href="actualites.html" class="btn-vert" style="font-size:.82rem;padding:8px 16px;">Lire</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ACTUALITÉS RÉCENTES ═══════════════ -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Dernières nouvelles</span>
+          <h2>Actualités de la Commune</h2>
+          <p>Les dernières informations et événements de Marsassoum.</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Carte actu 1 -->
+          <div class="card actu-card fade-in" data-delay="0">
+            <div class="actu-img-placeholder">📢</div>
+            <div class="card-body">
+              <p class="actu-meta"><span>Conseil Municipal</span> &nbsp;12 Mars 2025</p>
+              <h3>Session ordinaire du Conseil Municipal</h3>
+              <p>Le conseil municipal s'est réuni pour valider le plan d'investissement communal 2025-2030 et délibérer sur plusieurs projets prioritaires.</p>
+            </div>
+          </div>
+
+          <!-- Carte actu 2 -->
+          <div class="card actu-card fade-in" data-delay="100">
+            <div class="actu-img-placeholder">🏫</div>
+            <div class="card-body">
+              <p class="actu-meta"><span>Éducation</span> &nbsp;5 Mars 2025</p>
+              <h3>Inauguration d'une nouvelle salle de classe</h3>
+              <p>Une nouvelle classe a été inaugurée à l'école élémentaire de Marsassoum dans le cadre du programme d'amélioration de l'éducation locale.</p>
+            </div>
+          </div>
+
+          <!-- Carte actu 3 -->
+          <div class="card actu-card fade-in" data-delay="200">
+            <div class="actu-img-placeholder">🌿</div>
+            <div class="card-body">
+              <p class="actu-meta"><span>Environnement</span> &nbsp;20 Fév. 2025</p>
+              <h3>Campagne de reboisement communal</h3>
+              <p>Plus de 1 200 plants ont été mis en terre lors de la journée nationale de l'arbre, mobilisant élèves, jeunes et associations locales.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:40px;">
+          <a href="actualites.html" class="btn-primary"><i class="bi bi-arrow-right"></i> Toutes les actualités</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ APPEL À L'ACTION ═══════════════ -->
+    <section class="section" style="background:linear-gradient(135deg,var(--bleu-primaire),var(--bleu-secondaire));color:var(--blanc);padding:80px 0;">
+      <div class="container" style="text-align:center;">
+        <div class="fade-in">
+          <h2 style="color:var(--blanc);font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:14px;">Un besoin, une question ?</h2>
+          <p style="color:rgba(255,255,255,.8);max-width:520px;margin:0 auto 32px;">
+            Notre équipe municipale est disponible pour répondre à vos questions et vous accompagner dans vos démarches.
+          </p>
+          <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+            <a href="contact.html" class="btn-primary"><i class="bi bi-envelope-fill"></i> Nous contacter</a>
+            <a href="demarches.html" class="btn-secondary"><i class="bi bi-list-check"></i> Mes démarches</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Commune de Marsassoum</h4>
+          <p>Département de Sédhiou · Région de Sédhiou · Sénégal<br>
+          Engagée pour le développement durable et le bien-être de ses citoyens.</p>
+          <div style="margin-top:16px;">
+            <p style="font-size:.82rem;color:rgba(255,255,255,.5);">Maire : Seny Mandiang</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Accueil</a></li>
+            <li><a href="mairie.html"><i class="bi bi-chevron-right"></i> La Mairie</a></li>
+            <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> Démarches</a></li>
+            <li><a href="actualites.html"><i class="bi bi-chevron-right"></i> Actualités</a></li>
+            <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Territoire</a></li>
+            <li><a href="projets.html"><i class="bi bi-chevron-right"></i> Projets</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> État civil</a></li>
+            <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> Permis de construire</a></li>
+            <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Carte interactive</a></li>
+            <li><a href="projets.html"><i class="bi bi-chevron-right"></i> Projets en cours</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#"><i class="bi bi-geo-alt"></i> Marsassoum, Sédhiou</a></li>
+            <li><a href="tel:+221000000000"><i class="bi bi-telephone"></i> +221 XX XXX XX XX</a></li>
+            <li><a href="mailto:mairie@marsassoum.sn"><i class="bi bi-envelope"></i> mairie@marsassoum.sn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Commune de Marsassoum. Tous droits réservés. | Conception & Géomatique</p>
+        <div class="footer-socials">
+          <a href="#" title="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" title="Twitter"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" title="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bouton retour en haut -->
+  <button id="btn-top" title="Retour en haut">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+</body>
+</html>

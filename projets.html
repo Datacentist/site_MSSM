@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Projets de développement de la Commune de Marsassoum." />
+  <title>Projets — Commune de Marsassoum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">CM</div>
+        <div class="logo-text"><strong>Commune de Marsassoum</strong><span>Département de Sédhiou</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mairie.html">Mairie</a></li>
+        <li><a href="demarches.html">Démarches</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="territoire.html">Territoire</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="btn-darkmode" id="btn-darkmode" onclick="toggleDarkMode()" title="Mode sombre / clair">🌙</button>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="mairie.html">🏛️ Mairie</a>
+      <a href="demarches.html">📋 Démarches</a>
+      <a href="actualites.html">📰 Actualités</a>
+      <a href="territoire.html">🗺️ Territoire</a>
+      <a href="projets.html">🚀 Projets</a>
+      <a href="contact.html">✉️ Contact</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <i class="bi bi-chevron-right" style="font-size:.7rem;"></i>
+          <span>Projets</span>
+        </div>
+        <h1><i class="bi bi-rocket-takeoff"></i> Projets de Développement</h1>
+        <p>Les chantiers et programmes qui façonnent le Marsassoum de demain</p>
+      </div>
+    </div>
+
+    <!-- CHIFFRES CLÉS PROJETS -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-4" style="margin-bottom:60px;">
+          <div class="stat-bloc fade-in" data-delay="0">
+            <div class="chiffre" data-cible="12" data-suffix="">12</div>
+            <div class="label">Projets en cours</div>
+          </div>
+          <div class="stat-bloc fade-in" data-delay="80">
+            <div class="chiffre" data-cible="5" data-suffix="">5</div>
+            <div class="label">Projets planifiés</div>
+          </div>
+          <div class="stat-bloc fade-in" data-delay="160">
+            <div class="chiffre" data-cible="8" data-suffix="">8</div>
+            <div class="label">Projets terminés</div>
+          </div>
+          <div class="stat-bloc fade-in" data-delay="240">
+            <div class="chiffre" data-cible="225" data-suffix="M">225M</div>
+            <div class="label">Budget FCFA 2025</div>
+          </div>
+        </div>
+
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Portefeuille de projets</span>
+          <h2>Projets en Cours</h2>
+        </div>
+
+        <div class="grid-3">
+
+          <!-- Projet 1 -->
+          <div class="card projet-card fade-in" data-delay="0">
+            <div class="projet-header">
+              <div class="badge-statut en-cours">En cours</div>
+              <h3>Réhabilitation du réseau d'eau potable</h3>
+              <p>Amélioration de l'accès à l'eau potable dans 4 quartiers de la commune.</p>
+            </div>
+            <div class="card-body">
+              <div class="barre-progres-wrap">
+                <div class="barre-label"><span>Avancement</span><span>65%</span></div>
+                <div class="barre-bg"><div class="barre-fg" data-valeur="65"></div></div>
+              </div>
+              <div style="font-size:.82rem;color:var(--texte-secondaire);margin-top:14px;display:flex;flex-direction:column;gap:6px;">
+                <div><i class="bi bi-calendar-check" style="color:var(--bleu-secondaire);"></i> Début : Janv. 2025</div>
+                <div><i class="bi bi-calendar-x" style="color:var(--or-accent);"></i> Fin prévue : Juil. 2025</div>
+                <div><i class="bi bi-currency-dollar" style="color:var(--vert-accent);"></i> Budget : 45 M FCFA</div>
+                <div><i class="bi bi-building" style="color:var(--texte-secondaire);"></i> Financement : PNDL / Commune</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet 2 -->
+          <div class="card projet-card fade-in" data-delay="100">
+            <div class="projet-header">
+              <div class="badge-statut en-cours">En cours</div>
+              <h3>Construction de salles de classe</h3>
+              <p>Construction de 6 nouvelles salles de classe dans 3 écoles de la commune.</p>
+            </div>
+            <div class="card-body">
+              <div class="barre-progres-wrap">
+                <div class="barre-label"><span>Avancement</span><span>80%</span></div>
+                <div class="barre-bg"><div class="barre-fg" data-valeur="80"></div></div>
+              </div>
+              <div style="font-size:.82rem;color:var(--texte-secondaire);margin-top:14px;display:flex;flex-direction:column;gap:6px;">
+                <div><i class="bi bi-calendar-check" style="color:var(--bleu-secondaire);"></i> Début : Oct. 2024</div>
+                <div><i class="bi bi-calendar-x" style="color:var(--or-accent);"></i> Fin prévue : Avr. 2025</div>
+                <div><i class="bi bi-currency-dollar" style="color:var(--vert-accent);"></i> Budget : 38 M FCFA</div>
+                <div><i class="bi bi-building" style="color:var(--texte-secondaire);"></i> Financement : ARED / État</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet 3 -->
+          <div class="card projet-card fade-in" data-delay="200">
+            <div class="projet-header">
+              <div class="badge-statut en-cours">En cours</div>
+              <h3>Aménagement de la place du marché</h3>
+              <p>Réaménagement et modernisation de la place du marché central de Marsassoum.</p>
+            </div>
+            <div class="card-body">
+              <div class="barre-progres-wrap">
+                <div class="barre-label"><span>Avancement</span><span>40%</span></div>
+                <div class="barre-bg"><div class="barre-fg" data-valeur="40"></div></div>
+              </div>
+              <div style="font-size:.82rem;color:var(--texte-secondaire);margin-top:14px;display:flex;flex-direction:column;gap:6px;">
+                <div><i class="bi bi-calendar-check" style="color:var(--bleu-secondaire);"></i> Début : Mars 2025</div>
+                <div><i class="bi bi-calendar-x" style="color:var(--or-accent);"></i> Fin prévue : Déc. 2025</div>
+                <div><i class="bi bi-currency-dollar" style="color:var(--vert-accent);"></i> Budget : 52 M FCFA</div>
+                <div><i class="bi bi-building" style="color:var(--texte-secondaire);"></i> Financement : Commune / BM</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet 4 : planifié -->
+          <div class="card projet-card fade-in" data-delay="0">
+            <div class="projet-header" style="background:linear-gradient(135deg,#2e8b57,#1a5c38);">
+              <div class="badge-statut planifie">Planifié</div>
+              <h3>Éclairage solaire des rues</h3>
+              <p>Installation de 120 lampadaires solaires dans les principaux axes de la commune.</p>
+            </div>
+            <div class="card-body">
+              <div class="barre-progres-wrap">
+                <div class="barre-label"><span>Préparation</span><span>20%</span></div>
+                <div class="barre-bg"><div class="barre-fg" data-valeur="20"></div></div>
+              </div>
+              <div style="font-size:.82rem;color:var(--texte-secondaire);margin-top:14px;display:flex;flex-direction:column;gap:6px;">
+                <div><i class="bi bi-calendar-check" style="color:var(--bleu-secondaire);"></i> Début prévu : Juil. 2025</div>
+                <div><i class="bi bi-currency-dollar" style="color:var(--vert-accent);"></i> Budget estimé : 30 M FCFA</div>
+                <div><i class="bi bi-building" style="color:var(--texte-secondaire);"></i> Financement : Énergie renouvelable</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet 5 : planifié -->
+          <div class="card projet-card fade-in" data-delay="100">
+            <div class="projet-header" style="background:linear-gradient(135deg,#c9a84c,#9b7a20);">
+              <div class="badge-statut planifie">Planifié</div>
+              <h3>Centre multifonctionnel jeunesse</h3>
+              <p>Construction d'un espace dédié à la formation, la culture et les loisirs pour les jeunes.</p>
+            </div>
+            <div class="card-body">
+              <div class="barre-progres-wrap">
+                <div class="barre-label"><span>Étude</span><span>10%</span></div>
+                <div class="barre-bg"><div class="barre-fg" data-valeur="10"></div></div>
+              </div>
+              <div style="font-size:.82rem;color:var(--texte-secondaire);margin-top:14px;display:flex;flex-direction:column;gap:6px;">
+                <div><i class="bi bi-calendar-check" style="color:var(--bleu-secondaire);"></i> Début prévu : Jan. 2026</div>
+                <div><i class="bi bi-currency-dollar" style="color:var(--vert-accent);"></i> Budget estimé : 60 M FCFA</div>
+                <div><i class="bi bi-building" style="color:var(--texte-secondaire);"></i> Financement : Recherche en cours</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet 6 : terminé -->
+          <div class="card projet-card fade-in" data-delay="200">
+            <div class="projet-header" style="background:linear-gradient(135deg,#555,#333);">
+              <div class="badge-statut termine">Terminé</div>
+              <h3>Réfection de la route principale</h3>
+              <p>Bitumage et réfection de 8 km de route reliant le centre-ville aux quartiers périphériques.</p>
+            </div>
+            <div class="card-body">
+              <div class="barre-progres-wrap">
+                <div class="barre-label"><span>Réalisé</span><span>100%</span></div>
+                <div class="barre-bg"><div class="barre-fg" data-valeur="100"></div></div>
+              </div>
+              <div style="font-size:.82rem;color:var(--texte-secondaire);margin-top:14px;display:flex;flex-direction:column;gap:6px;">
+                <div><i class="bi bi-calendar-check" style="color:var(--bleu-secondaire);"></i> Réalisé en : 2024</div>
+                <div><i class="bi bi-currency-dollar" style="color:var(--vert-accent);"></i> Coût : 75 M FCFA</div>
+                <div><i class="bi bi-check-circle-fill" style="color:var(--vert-accent);"></i> Bénéficiaires : 4 500 habitants</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PLAN DE DÉVELOPPEMENT -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Vision 2030</span>
+          <h2>Plan de Développement Communal</h2>
+          <p>Les axes stratégiques du Plan de Développement Communal (PDC) 2025-2030.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card fade-in" data-delay="0">
+            <div class="card-body">
+              <div class="card-icon bleu"><i class="bi bi-droplet-fill"></i></div>
+              <h3>Axe 1 : Eau & Assainissement</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">Extension du réseau d'eau potable, réalisation de latrines modernes et amélioration de la gestion des ordures ménagères.</p>
+            </div>
+          </div>
+          <div class="card fade-in" data-delay="100">
+            <div class="card-body">
+              <div class="card-icon vert"><i class="bi bi-book-fill"></i></div>
+              <h3>Axe 2 : Éducation & Formation</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">Construction de salles de classe, équipement des écoles, soutien aux enseignants et formation professionnelle des jeunes.</p>
+            </div>
+          </div>
+          <div class="card fade-in" data-delay="200">
+            <div class="card-body">
+              <div class="card-icon or"><i class="bi bi-heart-pulse-fill"></i></div>
+              <h3>Axe 3 : Santé</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">Renforcement des postes de santé, acquisition d'équipements médicaux et amélioration de l'hygiène communautaire.</p>
+            </div>
+          </div>
+          <div class="card fade-in" data-delay="0">
+            <div class="card-body">
+              <div class="card-icon bleu"><i class="bi bi-lightning-fill"></i></div>
+              <h3>Axe 4 : Énergie</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">Extension du réseau électrique, promotion des énergies renouvelables (solaire) et éclairage public.</p>
+            </div>
+          </div>
+          <div class="card fade-in" data-delay="100">
+            <div class="card-body">
+              <div class="card-icon vert"><i class="bi bi-currency-exchange"></i></div>
+              <h3>Axe 5 : Économie locale</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">Soutien aux agriculteurs, promotion de l'éco-tourisme, développement du marché et appui aux petites entreprises.</p>
+            </div>
+          </div>
+          <div class="card fade-in" data-delay="200">
+            <div class="card-body">
+              <div class="card-icon or"><i class="bi bi-laptop-fill"></i></div>
+              <h3>Axe 6 : Numérique & Gouvernance</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">Digitalisation des services municipaux, accès au très haut débit et gouvernance participative via les outils numériques.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Commune de Marsassoum</h4><p>Département de Sédhiou · Sénégal</p></div>
+        <div class="footer-col"><h4>Navigation</h4><ul>
+          <li><a href="index.html"><i class="bi bi-chevron-right"></i> Accueil</a></li>
+          <li><a href="mairie.html"><i class="bi bi-chevron-right"></i> Mairie</a></li>
+          <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> Démarches</a></li>
+          <li><a href="actualites.html"><i class="bi bi-chevron-right"></i> Actualités</a></li>
+          <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Territoire</a></li>
+          <li><a href="projets.html"><i class="bi bi-chevron-right"></i> Projets</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Services</h4><ul>
+          <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> État civil</a></li>
+          <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Carte interactive</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+          <li><a href="#"><i class="bi bi-geo-alt"></i> Marsassoum, Sédhiou</a></li>
+          <li><a href="mailto:mairie@marsassoum.sn"><i class="bi bi-envelope"></i> mairie@marsassoum.sn</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Commune de Marsassoum.</p>
+        <div class="footer-socials"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btn-top" title="Retour en haut"><i class="bi bi-chevron-up"></i></button>
+  <script src="js/script.js"></script>
+</body>
+</html>

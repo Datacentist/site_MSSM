@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Organisation et équipe municipale de la Commune de Marsassoum." />
+  <title>La Mairie — Commune de Marsassoum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR identique sur toutes les pages -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">CM</div>
+        <div class="logo-text">
+          <strong>Commune de Marsassoum</strong>
+          <span>Département de Sédhiou</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mairie.html">Mairie</a></li>
+        <li><a href="demarches.html">Démarches</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="territoire.html">Territoire</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="btn-darkmode" id="btn-darkmode" onclick="toggleDarkMode()" title="Mode sombre / clair">🌙</button>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="mairie.html">🏛️ Mairie</a>
+      <a href="demarches.html">📋 Démarches</a>
+      <a href="actualites.html">📰 Actualités</a>
+      <a href="territoire.html">🗺️ Territoire</a>
+      <a href="projets.html">🚀 Projets</a>
+      <a href="contact.html">✉️ Contact</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <!-- HERO PAGE -->
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <i class="bi bi-chevron-right" style="font-size:.7rem;"></i>
+          <span>La Mairie</span>
+        </div>
+        <h1><i class="bi bi-building"></i> La Mairie de Marsassoum</h1>
+        <p>Organisation, élus, missions et historique de la commune</p>
+      </div>
+    </div>
+
+    <!-- MOT DU MAIRE -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;">
+          <div class="fade-left" style="text-align:center;">
+            <div class="equipe-avatar" style="width:120px;height:120px;font-size:3rem;margin:0 auto 16px;">👤</div>
+            <h3 style="margin-bottom:4px;">Seny Mandiang</h3>
+            <p class="role" style="font-family:'Raleway',sans-serif;font-size:.82rem;color:var(--vert-accent);font-weight:700;text-transform:uppercase;letter-spacing:.06em;">Maire de Marsassoum</p>
+            <div style="margin-top:16px;padding:14px;background:var(--bleu-clair);border-radius:10px;font-size:.82rem;color:var(--texte-secondaire);">
+              <p><i class="bi bi-envelope"></i> maire@marsassoum.sn</p>
+              <p style="margin-top:6px;"><i class="bi bi-calendar3"></i> Mandat 2022 – 2027</p>
+            </div>
+          </div>
+          <div class="fade-right">
+            <span class="section-eyebrow">Mot du Maire</span>
+            <h2>Un engagement au service de Marsassoum</h2>
+            <p style="color:var(--texte-secondaire);margin:16px 0;">
+              Chers habitants et amis de Marsassoum, c'est avec une grande fierté et un sens aigu des responsabilités 
+              que je vous accueille sur le portail numérique de notre commune. Ce site est le vôtre — un espace de 
+              dialogue, d'information et de service.
+            </p>
+            <p style="color:var(--texte-secondaire);margin-bottom:16px;">
+              Notre priorité est d'améliorer votre quotidien : accès à l'eau potable, éducation de qualité, 
+              routes praticables, santé pour tous. Ensemble, nous bâtissons le Marsassoum de demain, 
+              ancré dans ses valeurs et tourné vers l'avenir.
+            </p>
+            <p style="color:var(--texte-secondaire);">
+              Je vous invite à parcourir ce portail, à vous exprimer, et à être des acteurs de notre développement commun.
+            </p>
+            <p style="margin-top:20px;font-style:italic;color:var(--bleu-primaire);font-weight:600;">— Seny Mandiang, Maire de Marsassoum</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÉQUIPE MUNICIPALE -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Gouvernance</span>
+          <h2>L'Équipe Municipale</h2>
+          <p>Les élus au service des habitants de la commune de Marsassoum.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card equipe-card fade-in" data-delay="0">
+            <!--<div class="equipe-avatar">👤</div>-->
+            
+<div class="equipe-avatar">
+  <img src="assets/images/seny.JFIF" alt="Photo du maire Seny Mandiang">
+</div>
+
+            <h3>Seny Mandiang</h3>
+            <p class="role">Maire</p>
+            <p>Responsable de l'exécution des délibérations du conseil municipal et représentant de l'État dans la commune.</p>
+          </div>
+          <div class="card equipe-card fade-in" data-delay="100">
+            <div class="equipe-avatar">👤</div>
+            <h3>Khadidiatou DIENG</h3>
+            <p class="role">1ère Adjointe au Maire</p>
+            <p>En charge des affaires sociales, de l'éducation et des questions de genre au sein de la commune.</p>
+          </div>
+          <div class="card equipe-card fade-in" data-delay="200">
+            <div class="equipe-avatar">👤</div>
+            <h3>Boubacar Dabo</h3>
+            <p class="role">2ème Adjoint au Maire</p>
+            <p>Responsable des infrastructures, de l'urbanisme et du développement économique local.</p>
+          </div>
+        </div>
+
+        <!-- Conseillers municipaux -->
+        <div style="margin-top:48px;">
+          <h3 style="text-align:center;margin-bottom:28px;font-size:1.4rem;">Conseillers Municipaux</h3>
+          <div class="grid-4">
+            <!-- Conseillers fictifs pour illustration -->
+            <div class="card fade-in" style="text-align:center;padding:20px;">
+              <div style="font-size:2rem;margin-bottom:8px;">👤</div>
+              <h4 style="font-size:.95rem;">Aminata Diallo</h4>
+              <p style="font-size:.8rem;color:var(--texte-secondaire);">Conseillère</p>
+            </div>
+            <div class="card fade-in" data-delay="80" style="text-align:center;padding:20px;">
+              <div style="font-size:2rem;margin-bottom:8px;">👤</div>
+              <h4 style="font-size:.95rem;">Mamadou Baldé</h4>
+              <p style="font-size:.8rem;color:var(--texte-secondaire);">Conseiller</p>
+            </div>
+            <div class="card fade-in" data-delay="160" style="text-align:center;padding:20px;">
+              <div style="font-size:2rem;margin-bottom:8px;">👤</div>
+              <h4 style="font-size:.95rem;">Fatoumata Sané</h4>
+              <p style="font-size:.8rem;color:var(--texte-secondaire);">Conseillère</p>
+            </div>
+            <div class="card fade-in" data-delay="240" style="text-align:center;padding:20px;">
+              <div style="font-size:2rem;margin-bottom:8px;">👤</div>
+              <h4 style="font-size:.95rem;">Ibrahima Kouyaté</h4>
+              <p style="font-size:.8rem;color:var(--texte-secondaire);">Conseiller</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSIONS & ORGANISATION -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Fonctionnement</span>
+          <h2>Missions & Organisation</h2>
+        </div>
+        <div class="grid-3">
+          <div class="card fade-in" data-delay="0">
+            <div class="card-body">
+              <div class="card-icon bleu"><i class="bi bi-people-fill"></i></div>
+              <h3>Services aux citoyens</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">
+                État civil, délivrance d'actes administratifs, recensement, certificats de résidence et attestations diverses.
+              </p>
+            </div>
+          </div>
+          <div class="card fade-in" data-delay="100">
+            <div class="card-body">
+              <div class="card-icon vert"><i class="bi bi-tree-fill"></i></div>
+              <h3>Développement local</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">
+                Planification du développement communal, gestion des ressources naturelles et promotion de l'agriculture.
+              </p>
+            </div>
+          </div>
+          <div class="card fade-in" data-delay="200">
+            <div class="card-body">
+              <div class="card-icon or"><i class="bi bi-buildings-fill"></i></div>
+              <h3>Infrastructure & Urbanisme</h3>
+              <p style="color:var(--texte-secondaire);font-size:.9rem;margin-top:10px;">
+                Suivi des travaux publics, gestion du domaine communal, permis de construire et aménagement urbain.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIQUE (Timeline) -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Historique</span>
+          <h2>Grandes dates de Marsassoum</h2>
+        </div>
+        <div style="max-width:700px;margin:0 auto;">
+          <div class="timeline fade-in">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">1987</div>
+              <h3>Érection en commune</h3>
+              <p>Marsassoum devient officiellement une commune de plein exercice.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">1996</div>
+              <h3>Réforme de la décentralisation</h3>
+              <p>Dans le cadre de l'acte III de la décentralisation, la commune renforce ses compétences locales.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2013</div>
+              <h3>Création de la région de Sédhiou</h3>
+              <p>Marsassoum intègre la nouvelle région de Sédhiou, renforçant son ancrage administratif.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">2022</div>
+              <h3>Élections municipales</h3>
+              <p>Seny Mandiang est élu Maire, avec une équipe renouvelée pour le mandat 2022–2027.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot" style="background:var(--vert-accent);box-shadow:0 0 0 2px var(--vert-accent);"></div>
+              <div class="timeline-date">2025</div>
+              <h3>Lancement du portail numérique</h3>
+              <p>Mise en ligne du site officiel pour moderniser les services aux citoyens.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Commune de Marsassoum</h4>
+          <p>Département de Sédhiou · Région de Sédhiou · Sénégal<br>Engagée pour le développement durable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Accueil</a></li>
+            <li><a href="mairie.html"><i class="bi bi-chevron-right"></i> La Mairie</a></li>
+            <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> Démarches</a></li>
+            <li><a href="actualites.html"><i class="bi bi-chevron-right"></i> Actualités</a></li>
+            <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Territoire</a></li>
+            <li><a href="projets.html"><i class="bi bi-chevron-right"></i> Projets</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> État civil</a></li>
+            <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Carte interactive</a></li>
+            <li><a href="projets.html"><i class="bi bi-chevron-right"></i> Projets en cours</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#"><i class="bi bi-geo-alt"></i> Marsassoum, Sédhiou</a></li>
+            <li><a href="mailto:mairie@marsassoum.sn"><i class="bi bi-envelope"></i> mairie@marsassoum.sn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Commune de Marsassoum. Tous droits réservés.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter-x"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btn-top" title="Retour en haut"><i class="bi bi-chevron-up"></i></button>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Carte interactive et données géographiques de la Commune de Marsassoum — Géomatique." />
+  <title>Territoire — Commune de Marsassoum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Style spécifique page territoire -->
+  <style>
+    .info-geo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .info-geo-item {
+      background: var(--bleu-clair);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: .88rem;
+    }
+    .info-geo-item strong { display: block; color: var(--bleu-primaire); font-family: 'Raleway', sans-serif; font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; }
+    .info-geo-item span { color: var(--texte-principal); }
+
+    .graph-wrap {
+      background: var(--carte-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--rayon);
+      padding: 28px;
+      box-shadow: var(--ombre-carte);
+    }
+    .graph-wrap h3 { font-size: 1.05rem; margin-bottom: 20px; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">CM</div>
+        <div class="logo-text"><strong>Commune de Marsassoum</strong><span>Département de Sédhiou</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mairie.html">Mairie</a></li>
+        <li><a href="demarches.html">Démarches</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="territoire.html">Territoire</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="btn-darkmode" id="btn-darkmode" onclick="toggleDarkMode()" title="Mode sombre / clair">🌙</button>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="mairie.html">🏛️ Mairie</a>
+      <a href="demarches.html">📋 Démarches</a>
+      <a href="actualites.html">📰 Actualités</a>
+      <a href="territoire.html">🗺️ Territoire</a>
+      <a href="projets.html">🚀 Projets</a>
+      <a href="contact.html">✉️ Contact</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <i class="bi bi-chevron-right" style="font-size:.7rem;"></i>
+          <span>Territoire</span>
+        </div>
+        <h1><i class="bi bi-map"></i> Territoire de Marsassoum</h1>
+        <p>Carte interactive, données géographiques et statistiques de la commune</p>
+      </div>
+    </div>
+
+    <!-- INFOS GÉOGRAPHIQUES -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start;">
+          <div class="fade-left">
+            <span class="section-eyebrow">Géographie</span>
+            <h2>Présentation du Territoire</h2>
+            <p style="color:var(--texte-secondaire);margin:16px 0;">
+              Marsassoum est une commune riveraine de la Casamance, située dans le département de Sédhiou, 
+              région de Sédhiou au Sénégal. Elle est caractérisée par un relief de plaine inondable, 
+              une végétation de mangrove et de forêt galerie, et un réseau hydrographique dense.
+            </p>
+            <div class="info-geo-grid">
+              <div class="info-geo-item"><strong>Région</strong><span>Sédhiou</span></div>
+              <div class="info-geo-item"><strong>Département</strong><span>Sédhiou</span></div>
+              <div class="info-geo-item"><strong>Superficie</strong><span>≈ 180 km²</span></div>
+              <div class="info-geo-item"><strong>Population</strong><span>~8 500 habitants</span></div>
+              <div class="info-geo-item"><strong>Latitude</strong><span>12°49' N</span></div>
+              <div class="info-geo-item"><strong>Longitude</strong><span>15°39' O</span></div>
+              <div class="info-geo-item"><strong>Cours d'eau principal</strong><span>Rivière Casamance</span></div>
+              <div class="info-geo-item"><strong>Altitude moyenne</strong><span>10 – 25 m</span></div>
+            </div>
+          </div>
+          <div class="fade-right">
+            <div class="card">
+              <div class="card-body">
+                <h3 style="font-size:1rem;margin-bottom:16px;"><i class="bi bi-bar-chart-fill" style="color:var(--bleu-secondaire);"></i> Infrastructures communales</h3>
+                <div style="display:flex;flex-direction:column;gap:10px;font-size:.88rem;">
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>🏫 Écoles élémentaires</span><strong>5</strong>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>🎓 CEM / Lycée</span><strong>2</strong>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>🏥 Postes de santé</span><strong>3</strong>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>🛣️ Routes aménagées</span><strong>28 km</strong>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>💧 Forages</span><strong>8</strong>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>🏪 Marchés</span><strong>2</strong>
+                  </div>
+                  <div style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>🕌 Mosquées</span><strong>12</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARTE INTERACTIVE LEAFLET -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Géomatique</span>
+          <h2>Carte Interactive de Marsassoum</h2>
+          <p>Explorez les infrastructures, équipements et limites communales sur la carte. Utilisez les couches pour filtrer les éléments affichés.</p>
+        </div>
+
+        <!-- Carte Leaflet -->
+        <div class="fade-in">
+          <div id="carte-territoire"></div>
+
+          <!-- Légende -->
+          <div class="legende-carte">
+            <h4><i class="bi bi-map-fill" style="color:var(--bleu-secondaire);"></i> Légende de la carte</h4>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;">
+              <div class="legende-item"><div class="legende-dot" style="background:#2563a8;"></div> Limite communale</div>
+              <div class="legende-item"><div class="legende-dot" style="background:#c9a84c;"></div> Route nationale (RN4)</div>
+              <div class="legende-item"><div class="legende-dot" style="background:#2563a8;"></div> Écoles</div>
+              <div class="legende-item"><div class="legende-dot" style="background:#e53e3e;"></div> Postes de santé</div>
+              <div class="legende-item"><div class="legende-dot" style="background:#38a169;"></div> Pharmacies</div>
+              <div class="legende-item"><div class="legende-dot" style="background:#c9a84c;"></div> Mairie</div>
+              <div class="legende-item"><div class="legende-dot" style="background:#2e8b57;"></div> Marchés</div>
+              <div class="legende-item"><div class="legende-dot" style="background:#6b46c1;"></div> Mosquées</div>
+            </div>
+            <p style="font-size:.8rem;color:var(--texte-secondaire);margin-top:12px;">
+              <i class="bi bi-info-circle"></i> Cliquez sur un marqueur pour afficher les informations. 
+              Utilisez le contrôle de couches (en haut à droite) pour afficher/masquer des catégories.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTIQUES & GRAPHIQUES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Statistiques</span>
+          <h2>Données & Visualisations</h2>
+          <p>Statistiques démographiques, infrastructurelles et budgétaires de la commune.</p>
+        </div>
+
+        <!-- Graphique population (pleine largeur) -->
+        <div class="graph-wrap fade-in" style="margin-bottom:28px;">
+          <h3><i class="bi bi-people-fill" style="color:var(--bleu-secondaire);"></i> Évolution de la population (2000 – 2024)</h3>
+          <canvas id="graph-population" height="80"></canvas>
+        </div>
+
+        <div class="grid-2">
+          <!-- Graphique infrastructures -->
+          <div class="graph-wrap fade-in" data-delay="80">
+            <h3><i class="bi bi-building" style="color:var(--vert-accent);"></i> Répartition des infrastructures</h3>
+            <canvas id="graph-infras"></canvas>
+          </div>
+
+          <!-- Graphique budget -->
+          <div class="graph-wrap fade-in" data-delay="160">
+            <h3><i class="bi bi-currency-dollar" style="color:var(--or-accent);"></i> Budget 2025 par secteur (millions FCFA)</h3>
+            <canvas id="graph-budget"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Commune de Marsassoum</h4><p>Département de Sédhiou · Sénégal</p></div>
+        <div class="footer-col"><h4>Navigation</h4><ul>
+          <li><a href="index.html"><i class="bi bi-chevron-right"></i> Accueil</a></li>
+          <li><a href="mairie.html"><i class="bi bi-chevron-right"></i> Mairie</a></li>
+          <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> Démarches</a></li>
+          <li><a href="actualites.html"><i class="bi bi-chevron-right"></i> Actualités</a></li>
+          <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Territoire</a></li>
+          <li><a href="projets.html"><i class="bi bi-chevron-right"></i> Projets</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Services</h4><ul>
+          <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> État civil</a></li>
+          <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Carte interactive</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+          <li><a href="#"><i class="bi bi-geo-alt"></i> Marsassoum, Sédhiou</a></li>
+          <li><a href="mailto:mairie@marsassoum.sn"><i class="bi bi-envelope"></i> mairie@marsassoum.sn</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Commune de Marsassoum.</p>
+        <div class="footer-socials"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btn-top" title="Retour en haut"><i class="bi bi-chevron-up"></i></button>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+  <!-- Initialisation après chargement des bibliothèques -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      window.initialiserCarte();
+      window.initialiserGraphiques();
+    });
+  </script>
+</body>
+</html>

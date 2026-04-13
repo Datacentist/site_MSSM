@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Démarches administratives de la Commune de Marsassoum — état civil, permis, attestations." />
+  <title>Démarches — Commune de Marsassoum</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">CM</div>
+        <div class="logo-text"><strong>Commune de Marsassoum</strong><span>Département de Sédhiou</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="mairie.html">Mairie</a></li>
+        <li><a href="demarches.html">Démarches</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="territoire.html">Territoire</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="btn-darkmode" id="btn-darkmode" onclick="toggleDarkMode()" title="Mode sombre / clair">🌙</button>
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="index.html">🏠 Accueil</a>
+      <a href="mairie.html">🏛️ Mairie</a>
+      <a href="demarches.html">📋 Démarches</a>
+      <a href="actualites.html">📰 Actualités</a>
+      <a href="territoire.html">🗺️ Territoire</a>
+      <a href="projets.html">🚀 Projets</a>
+      <a href="contact.html">✉️ Contact</a>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <div class="page-hero">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <i class="bi bi-chevron-right" style="font-size:.7rem;"></i>
+          <span>Démarches</span>
+        </div>
+        <h1><i class="bi bi-file-earmark-check"></i> Démarches Administratives</h1>
+        <p>Toutes vos démarches à la mairie, expliquées simplement</p>
+      </div>
+    </div>
+
+    <!-- LISTE DES DÉMARCHES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-eyebrow">Nos services</span>
+          <h2>Que souhaitez-vous faire ?</h2>
+          <p>Choisissez votre démarche pour connaître les documents requis et la procédure à suivre.</p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px;max-width:900px;margin:0 auto;">
+
+          <div class="demarche-item fade-in" data-delay="0">
+            <div class="demarche-icone"><i class="bi bi-file-person"></i></div>
+            <div>
+              <h3>Acte de Naissance</h3>
+              <p>Documents requis : Carnet de vaccination ou carnet de santé, présence des deux parents ou tuteur légal. Gratuit. Délai : immédiat.</p>
+            </div>
+          </div>
+
+          <div class="demarche-item fade-in" data-delay="60">
+            <div class="demarche-icone"><i class="bi bi-heart-fill"></i></div>
+            <div>
+              <h3>Acte de Mariage</h3>
+              <p>Documents requis : Pièces d'identité des deux époux, témoins (2), certificat de célibat ou de capacité à mariage. Délai : 3 à 7 jours.</p>
+            </div>
+          </div>
+
+          <div class="demarche-item fade-in" data-delay="120">
+            <div class="demarche-icone"><i class="bi bi-file-earmark-x"></i></div>
+            <div>
+              <h3>Acte de Décès</h3>
+              <p>Documents requis : Certificat médical de décès, pièce d'identité du déclarant, livret de famille si disponible. Délai : immédiat.</p>
+            </div>
+          </div>
+
+          <div class="demarche-item fade-in" data-delay="180">
+            <div class="demarche-icone"><i class="bi bi-house-check"></i></div>
+            <div>
+              <h3>Certificat de Résidence</h3>
+              <p>Documents requis : Pièce d'identité valide, justificatif de domicile (facture eau/électricité ou témoignage). Délai : immédiat.</p>
+            </div>
+          </div>
+
+          <div class="demarche-item fade-in" data-delay="240">
+            <div class="demarche-icone"><i class="bi bi-hammer"></i></div>
+            <div>
+              <h3>Permis de Construire</h3>
+              <p>Documents requis : Plan du projet, titre foncier ou bail, étude d'impact. Délai : 30 à 45 jours. Frais variables selon superficie.</p>
+            </div>
+          </div>
+
+          <div class="demarche-item fade-in" data-delay="300">
+            <div class="demarche-icone"><i class="bi bi-shop"></i></div>
+            <div>
+              <h3>Autorisation d'Activité Commerciale</h3>
+              <p>Documents requis : Pièce d'identité, plan du local, preuve de paiement des taxes locales. Délai : 15 jours.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULAIRE DE DEMANDE EN LIGNE -->
+    <section class="section section-alt">
+      <div class="container">
+        <div style="max-width:720px;margin:0 auto;">
+          <div class="section-header fade-in">
+            <span class="section-eyebrow">En ligne</span>
+            <h2>Soumettre une demande</h2>
+            <p>Remplissez ce formulaire pour initier votre demande. Vous serez contacté sous 48h.</p>
+          </div>
+
+          <div class="card fade-in">
+            <div class="card-body">
+              <form id="form-demarche" novalidate>
+
+                <div class="grid-2">
+                  <div class="form-group">
+                    <label for="dem-prenom">Prénom <span style="color:#e53e3e">*</span></label>
+                    <input type="text" id="dem-prenom" class="form-control" placeholder="Votre prénom" />
+                    <div class="msg-erreur" id="err-prenom">Veuillez saisir votre prénom (min. 2 caractères).</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="dem-nom">Nom <span style="color:#e53e3e">*</span></label>
+                    <input type="text" id="dem-nom" class="form-control" placeholder="Votre nom de famille" />
+                    <div class="msg-erreur" id="err-dem-nom">Veuillez saisir votre nom (min. 2 caractères).</div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="dem-type">Type de document demandé <span style="color:#e53e3e">*</span></label>
+                  <select id="dem-type" class="form-control">
+                    <option value="">-- Sélectionner --</option>
+                    <option value="naissance">Acte de naissance</option>
+                    <option value="mariage">Acte de mariage</option>
+                    <option value="deces">Acte de décès</option>
+                    <option value="residence">Certificat de résidence</option>
+                    <option value="construire">Permis de construire</option>
+                    <option value="commerce">Autorisation commerciale</option>
+                    <option value="autre">Autre</option>
+                  </select>
+                  <div class="msg-erreur" id="err-type">Veuillez sélectionner un type de document.</div>
+                </div>
+
+                <div class="form-group">
+                  <label for="dem-telephone">Téléphone de contact</label>
+                  <input type="tel" id="dem-telephone" class="form-control" placeholder="+221 XX XXX XX XX" />
+                </div>
+
+                <div class="form-group">
+                  <label for="dem-precisions">Précisions ou informations complémentaires</label>
+                  <textarea id="dem-precisions" class="form-control" placeholder="Ajoutez ici toute information utile pour traiter votre demande..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:14px;">
+                  <i class="bi bi-send-fill"></i> Soumettre ma demande
+                </button>
+
+                <div class="alerte" id="alerte-demarche"></div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Horaires -->
+          <div class="card fade-in" style="margin-top:24px;">
+            <div class="card-body">
+              <h3 style="margin-bottom:16px;font-size:1.1rem;"><i class="bi bi-clock" style="color:var(--bleu-secondaire);"></i> Horaires d'ouverture</h3>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:.9rem;">
+                <div><strong>Lundi – Jeudi :</strong></div><div>8h00 – 16h30</div>
+                <div><strong>Vendredi :</strong></div><div>8h00 – 13h00</div>
+                <div><strong>Samedi – Dimanche :</strong></div><div style="color:var(--texte-secondaire);">Fermé</div>
+              </div>
+              <p style="font-size:.82rem;color:var(--texte-secondaire);margin-top:14px;">
+                <i class="bi bi-info-circle"></i> Pour les urgences d'état civil (décès), présentez-vous directement à la mairie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h4>Commune de Marsassoum</h4><p>Département de Sédhiou · Sénégal</p></div>
+        <div class="footer-col"><h4>Navigation</h4><ul>
+          <li><a href="index.html"><i class="bi bi-chevron-right"></i> Accueil</a></li>
+          <li><a href="mairie.html"><i class="bi bi-chevron-right"></i> Mairie</a></li>
+          <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> Démarches</a></li>
+          <li><a href="actualites.html"><i class="bi bi-chevron-right"></i> Actualités</a></li>
+          <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Territoire</a></li>
+          <li><a href="projets.html"><i class="bi bi-chevron-right"></i> Projets</a></li>
+          <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Services</h4><ul>
+          <li><a href="demarches.html"><i class="bi bi-chevron-right"></i> État civil</a></li>
+          <li><a href="territoire.html"><i class="bi bi-chevron-right"></i> Carte interactive</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul>
+          <li><a href="#"><i class="bi bi-geo-alt"></i> Marsassoum, Sédhiou</a></li>
+          <li><a href="mailto:mairie@marsassoum.sn"><i class="bi bi-envelope"></i> mairie@marsassoum.sn</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Commune de Marsassoum.</p>
+        <div class="footer-socials"><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-twitter-x"></i></a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="btn-top" title="Retour en haut"><i class="bi bi-chevron-up"></i></button>
+  <script src="js/script.js"></script>
+</body>
+</html>
